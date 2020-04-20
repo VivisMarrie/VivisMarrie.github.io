@@ -36,16 +36,21 @@ h1{
 
 }
 
-.news img {
-    max-width: 450px;
-    max-height: 280px;
-}
-
 .news{
     width: 33%;
+    max-width: 33%;
     text-align: justify;
     padding: 20px;
    
+}
+
+.news img {
+    max-width: 100%;
+}
+
+.news iframe {
+    max-width: 100%;
+    max-height: auto;
 }
 
 .content{
@@ -137,3 +142,17 @@ textarea {
     text-align: right;
     padding: 20px;
 }
+
+.videoContainer {
+    position: relative;
+     width: 100%;
+     height: 0;
+     padding-bottom: 60.25%;
+ }
+ .video {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }
