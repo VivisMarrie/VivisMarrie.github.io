@@ -4,8 +4,8 @@ const url = 'https://v2-api.sheety.co/33ddb6f9591aa44f82386f033548141d/airvnv/ai
 var dados;
 var currentPage = 1;
 var totalPage;
-var qtdHospedes = 0;
-var qtdDias = 0;
+var qtdHospedes = "";
+var qtdDias = "";
 
 const getvals = async function () {
     return await fetch(url)
@@ -71,7 +71,7 @@ function showPage(page) {
             badge = ` <span class="badge badge-dark">${data.tag}</span>`;
         }
         let totalizador = "";
-        if(qtdHospedes != null && qtdDias != null){
+        if(qtdHospedes != "" && qtdDias != ""){
             let total = qtdHospedes * qtdDias * data.price;
             totalizador = `<span class="float-right"><small class="text-muted">Total: <b>R$ ${total}</b></small></span>`;
         }
